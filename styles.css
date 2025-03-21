@@ -1,0 +1,650 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+p, li, ul{
+    position: relative;
+}
+
+button{
+    background-color: rgba(9, 6, 6, 0.9);
+    color: rgb(230, 239, 238);
+    border-color: rgba(9, 6, 6, 0.1);
+    text-align: center;
+    width: 116.65px;
+    height: 45px;
+    font-family: "Montserrat";
+    border-radius: 5px;
+    
+}
+
+img, button, .refound, .img-social-red, .topbar-spans, .hero, .icons-navbar-right{
+    cursor: pointer;
+}
+
+.Announce:hover{
+    background-color: rgba(9, 6, 6, 0.9);
+    color: rgb(255, 255, 255);
+}
+
+.skinny-var{
+    
+    width: 100%;
+    height: 20vh;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    /* padding-bottom: 14px;*/
+
+    justify-content: space-evenly;
+    padding-top: 8px; 
+
+    
+ 
+}
+
+.topbar{
+    height: 100%;
+    width: 29%;
+    display: flex;
+    
+   
+ } 
+
+ .topbar-left {
+    justify-content: space-evenly;
+ }
+
+ .topbar-right{
+    justify-content: left;
+ }
+
+ .topbar-spans{
+    width: 30%;
+ }
+
+.img-social-red{
+    width: auto;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+.icon-img{
+    width: auto;
+    
+}
+
+
+.topbar-spans{
+    height: 100%;
+    
+}
+
+.topbar-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar-right{
+    
+    justify-content: end;
+}
+
+
+div > [data-value="Announce"]{
+
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'M-body-Font';
+    text-size-adjust: 100%;
+    border: 2px  solid ;
+    padding: 2px;
+    border-radius: 3px;
+
+}
+
+
+
+
+.navbar{
+    height: 7vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+
+}
+
+
+.logo-plataform{
+    width: 40%;
+    height: 40%;
+}
+.menu-navbar{
+    text-align: center;
+    width: 70%;
+    justify-content : center;
+}
+
+.navbar-menu-data{
+    background-color: rgb(255, 255, 255);
+    color: rgba(9, 6, 6);
+    border-color: rgb(255, 255, 255);
+    width: auto;
+    border: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    position: relative;
+    font-size: 15px;
+}
+
+.navbar-menu{
+    background-color: rgb(255, 255, 255);
+    color: rgba(9, 6, 6);
+    border-color: rgb(255, 255, 255);
+    width: auto;
+    border: 0;
+    font-size: 15px;
+    position: relative;
+}
+
+.non-active{
+    color: rgba(9, 6, 6, 0.4);
+}
+
+.navbar-menu-data > img{
+    width: 10px;
+}
+
+.navbar-menu::before,
+.navbar-menu-data::before{
+    content: '';
+    border-bottom: 2px solid;
+    position: absolute;
+    width: 0%;
+    opacity: 0;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
+}
+.non-active:hover{
+    color:  rgba(9, 6, 6);;
+}
+.navbar-menu:hover::before,
+.navbar-menu-data:hover:before{
+    opacity: 1;
+    width: 100%;
+}
+
+.active-navbar-menu::before{
+    opacity: 1;
+    width: 100%;
+    color: rgba(9, 6, 6, 0.9);
+}
+
+
+
+.hero{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.1)
+    )
+    ,url("files/background.png");
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.browse-products{
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.browse-products > [data-value="title-browse-products"] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    
+}
+
+.bar-browse-products{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+
+
+.products-and-prices {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5,  1fr);
+    gap: 20px;
+    padding-left: 10%;
+    overflow-x: auto;
+    
+    
+}
+
+.browse-products > [data-value="products-and-prices"]::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* 4 mediaquerys que sean de 1024, 1608, 1fr
+
+para hacer scropll, behavier scroll
+
+overflow hidden  */
+
+.span-browse-product{
+    display: block;
+    width: 100%;
+    
+    height: 100%;
+}
+.presentation-product{
+    width: 80%;
+    
+    position: relative;
+    background-size: cover ;
+    background-position: center;
+    
+}
+.products-and-prices:nth-child(1){
+    background-image: url("https://epomaker.com/cdn/shop/files/IMG_9964_1.jpg?v=1742191712&width=1100");
+}
+
+
+
+
+
+.product-images{
+    width: 80%;
+    position: absolute;
+    visibility: hidden;
+}
+
+.presentation-product:hover::before{
+    visibility: hidden;
+}
+
+strike{
+    opacity: 0.4;
+}
+
+.discount-text{
+    color: rgb(209, 35, 35);
+}
+
+
+
+.button-products{
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    
+    justify-content: center;
+}
+
+.carousel{
+    width: 100%;
+    height:600px;
+    background-color: rgb(245,245,245);
+    display: flex;
+    justify-content: flex-end;
+    
+    
+    color: #333;
+}
+
+.title-carousel{
+    display: flex;
+
+    font-size: 30px;
+    padding-top: 60px;
+    justify-content: center;
+}
+
+.carousel-shop-selections{
+    
+    width: 80%;
+    justify-content: space;
+    display:inline-block;
+    position: relative;
+    background-size: cover;
+}
+
+.cards-products-carousel{
+    padding-top: 15%;
+    gap: 20px;
+    display: flex;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+
+    height: 100%;
+}
+
+.cards-with-product{
+    width: 20%;
+    height: 85%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 20px;
+    padding-left: 20px;
+    
+}
+
+.cards-with-product > button{
+    width: 15%;
+    height: 15%;
+    border-radius: 100%;
+    padding-right: 40px;
+    position: relative;
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px 20px;
+}
+
+.card-1{
+    
+
+    background-image: url("https://epomaker.com/cdn/shop/files/keyboards_0e7e09de-1a05-4a1c-a4f5-b54b68a73a1f.jpg?v=1689153995&width=360");
+    
+}
+.card-2{
+    background-image: url("https://epomaker.com/cdn/shop/files/diy_88c43460-dc0c-42c0-aad5-4a6a16929f31.jpg?v=1689154296&width=360");
+}
+
+.card-3{
+    background-image: url("https://epomaker.com/cdn/shop/files/keycaps.jpg?v=1689154901&width=360");
+}
+
+.card-4{
+    background-image: url("https://epomaker.com/cdn/shop/files/switches_40a9137e-20a8-4d37-886d-17c7acaf812b.jpg?v=1689228751&width=360");
+}
+
+.card-5{
+    background-image: url("https://epomaker.com/cdn/shop/files/stabilizers.jpg?v=1689229278&width=360");
+}
+
+.card-6{
+
+    background-image: url("https://epomaker.com/cdn/shop/files/accesories-updated.jpg?v=1689674497&width=360");
+}
+
+.card-7{
+    background-image: url("https://epomaker.com/cdn/shop/files/upgradecables.jpg?v=1689230693&width=360");
+}
+.card-8{
+    background-image: url("https://epomaker.com/cdn/shop/files/deskmats.jpg?v=1689232850&width=360");
+}
+
+.cards-with-product:hover{
+    transform: scale(.9);
+    transition: .4s;
+}
+
+.switches{
+    height: 90vh;
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.switches > [data-value="left-div-text"]{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    justify-content: center;
+    background-color: rgb(245,245,245);
+}
+
+.images-switches{
+    width: 25%;
+    height: 40%;
+    display: block;
+    justify-content: center;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.images-switches > img{
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-switches{
+    width: 100%;
+}
+
+.HFOU-button > button:hover,
+.button-products > button:hover,
+.button-switches > button:hover{
+    transform: scale(1.1);
+    transition:  0.7s;
+}
+
+
+ul{
+    
+    list-style: none;
+    font-size: 2em;
+}
+
+
+.images-switches > img:hover{
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+
+.switches-left-div ul li a::before{
+    content: '';
+    border-bottom: 2px solid;
+    position: absolute;
+    width: 0%;
+    opacity: 0;
+    bottom: -3px;
+    left:  calc(100% - 95%);
+    transition: 0.5s;
+}
+
+
+.switches-left-div ul li a.active:before,
+.switches-left-div ul li a:hover:before{
+    opacity: 1;
+    width: calc(100% - 10%);
+}
+
+.switches-left-div ul li a.active:after{
+    opacity: 1;
+    width: calc(100% - 10%);
+}
+
+.switches > [data-value="right-div-images"]{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    
+    justify-content: center;
+    background-color: rgb(251, 251, 251);
+}
+
+
+.hear-from-our-users{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.HFOU-grid{
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 20px;
+}
+
+.HFOU-grid > figure > img{
+    width: 90%;
+    border-radius: 5%;
+    
+}
+
+.HFOU-grid > figure{
+    overflow: hidden;
+}
+
+
+
+.HFOU-button{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HFOU-grid > figure > img:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+    
+}
+
+.featured-in-media{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.featured-in-media > p{
+    width: 45%;
+    font-size: 2em;
+    text-align: center;
+}
+.featured-in-media > [data-value="title-media"]{
+    font-size: 2.5em;
+}
+
+.more-links{
+    display:flex;
+    justify-content: space-around;
+    
+}
+.div-links-footer{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.div-links-footer > p{
+    justify-content:safe;
+}
+
+
+
+@media (max-width: 1280px) {
+    .products-and-prices {
+      grid-template-columns: repeat(5,minmax(0,1fr));
+      
+    }
+  }
+@media (max-width: 1024px) {
+    .products-and-prices {
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      
+      
+    }
+    .HFOU-grid{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    
+  }
+
+@media (max-width: 768px) {
+    .products-and-prices {
+      grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
+    .topbar-left {
+        display: none;
+     }
+    
+     .topbar-right{
+        display: none;
+     }
+
+     .menu-navbar{
+        display: none;
+     }
+
+     .non-display{
+        display: none;
+     }
+    
+  }
+
+  @media screen and (max-width: 767px) {
+    .products-and-prices {
+      width: 100%;
+      display: flex;
+      
+    }
+    .HFOU-grid{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .topbar-left {
+        display: none;
+     }
+    
+     .topbar-right{
+        display: none;
+     }
+     .menu-navbar{
+        display: none;
+     }
+
+     .non-display{
+        display: none;
+     }
+}
